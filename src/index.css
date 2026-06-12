@@ -12,7 +12,7 @@
   --accent-2-soft: rgba(255, 214, 10, 0.14);
   --on-accent: #0a0a0a;
   --border: #262626;
-  --nav-bg: rgba(10, 10, 10, 0.85);
+  --nav-bg: #0d1b3f; /* blue navbar */
   --shadow: rgba(0, 0, 0, 0.5);
 
   --max: 1080px;
@@ -34,7 +34,7 @@
   --accent-2-soft: rgba(234, 179, 8, 0.16);
   --on-accent: #ffffff;
   --border: #e4e4e7;
-  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-bg: #1d4ed8; /* blue navbar */
   --shadow: rgba(0, 0, 0, 0.15);
 }
 
@@ -74,10 +74,10 @@ a {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 50;
+  background: var(--nav-bg);
   transition: background 0.3s, box-shadow 0.3s, backdrop-filter 0.3s;
 }
 .nav--scrolled {
-  background: var(--nav-bg);
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 30px var(--shadow);
 }
