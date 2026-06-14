@@ -1,14 +1,15 @@
 export const profile = {
   name: 'Md. Mehedi Hasan Polash',
-  role: 'Aspiring Web Developer',
+  role: 'MERN Stack Developer',
   tagline:
-    'Web Developer & CCNA student building full-stack apps with React, Node.js & Nest.js — ' +
-    'with a growing passion for computer networking.',
+    'MERN Stack Developer at NEXOGS Systems Ltd, building full-stack apps with React, Node.js, ' +
+    'Express & MongoDB — and a Cisco CCNA networking enthusiast.',
   about:
-    'I am a Computer Science graduate and CCNA student skilled in full-stack web development ' +
-    'with React, Firebase, Node.js and Nest.js. I have built and deployed multiple end-to-end ' +
-    'applications, and I am growing a passion for computer networking — routing, switching ' +
-    'and IP subnetting. I am eager to contribute as a frontend, full-stack or networking intern.',
+    'I am a Computer Science graduate working as a MERN Stack Developer at NEXOGS Systems Ltd, ' +
+    'building and shipping full-stack web applications with React, Node.js, Express and MongoDB. ' +
+    'I have built and deployed multiple end-to-end applications, and I have a strong passion for ' +
+    'computer networking — routing, switching and IP subnetting (Cisco CCNA). I love turning ideas ' +
+    'into clean, performant products.',
   location: 'Dhaka, Bangladesh',
   email: 'polashmehedi33@gmail.com',
   phone: '+880 1611 940 521',
@@ -20,24 +21,90 @@ export const profile = {
   },
 }
 
-// Real data: primary language across 60 public GitHub repos (mehedipolash).
-// Computed via the GitHub API — this is repository share, not a self-rated skill level.
-export const languages = [
-  { name: 'JavaScript', level: 40 },
-  { name: 'HTML', level: 38 },
-  { name: 'CSS', level: 8 },
-  { name: 'PHP', level: 7 },
-  { name: 'TypeScript', level: 2 },
-  { name: 'Java · C# · C++', level: 5 },
+// Current & past roles. Newest first.
+export const experience = [
+  {
+    role: 'MERN Stack Developer Intern',
+    company: 'NEXOGS SYSTEMS LTD',
+    period: 'Present',
+    current: true,
+    location: 'Dhaka, Bangladesh',
+    summary:
+      'Building and shipping full-stack features with the MERN stack (MongoDB, Express, React, Node.js) ' +
+      'as part of the engineering team — developing REST APIs, responsive React interfaces and ' +
+      'database-backed application logic in an Agile workflow.',
+    tags: ['MongoDB', 'Express', 'React', 'Node.js', 'REST API'],
+  },
 ]
 
-// From CV Technical Skills + the stacks actually used across the projects above.
-export const stack = {
-  Frontend: ['React', 'Next.js', 'React Router', 'Tailwind CSS', 'DaisyUI', 'Framer Motion'],
-  Backend: ['Node.js', 'Nest.js', 'Express', 'REST API', 'JWT Auth'],
-  'Tools & DB': ['Git', 'Firebase', 'MongoDB', 'PostgreSQL', 'MySQL', 'Vercel', 'Figma'],
-  Networking: ['Subnetting (VLSM)', 'Routing & Switching', 'OSI / TCP-IP', 'Cisco Packet Tracer'],
-}
+// Skill groups rendered as a professional icon grid.
+// `icon` is a Devicon slug (https://devicon.dev) loaded from the jsDelivr CDN.
+export const skillGroups = [
+  {
+    label: 'Languages',
+    skills: [
+      { name: 'JavaScript', icon: 'javascript' },
+      { name: 'TypeScript', icon: 'typescript' },
+      { name: 'Python', icon: 'python' },
+      { name: 'Java', icon: 'java' },
+      { name: 'C++', icon: 'cplusplus' },
+      { name: 'PHP', icon: 'php' },
+    ],
+  },
+  {
+    label: 'Frontend',
+    skills: [
+      { name: 'React', icon: 'react' },
+      { name: 'Next.js', icon: 'nextjs' },
+      { name: 'HTML5', icon: 'html5' },
+      { name: 'CSS3', icon: 'css3' },
+      { name: 'Tailwind CSS', icon: 'tailwindcss' },
+      { name: 'Framer Motion', icon: 'framermotion' },
+    ],
+  },
+  {
+    label: 'Backend',
+    skills: [
+      { name: 'Node.js', icon: 'nodejs' },
+      { name: 'Nest.js', icon: 'nestjs' },
+      { name: 'Express', icon: 'express' },
+      { name: 'REST API', icon: 'fastapi' },
+      { name: 'JWT Auth', icon: 'jsonwebtokens' },
+    ],
+  },
+  {
+    label: 'Tools & Databases',
+    skills: [
+      { name: 'Git', icon: 'git' },
+      { name: 'MongoDB', icon: 'mongodb' },
+      { name: 'PostgreSQL', icon: 'postgresql' },
+      { name: 'MySQL', icon: 'mysql' },
+      { name: 'Firebase', icon: 'firebase' },
+      { name: 'Postman', icon: 'postman' },
+      { name: 'Figma', icon: 'figma' },
+      { name: 'Vercel', icon: 'vercel' },
+    ],
+  },
+  {
+    label: 'Networking',
+    skills: [
+      { name: 'Cisco Packet Tracer', icon: 'cisco' },
+      { name: 'Routing & Switching', icon: 'cisco' },
+      { name: 'VLSM Subnetting', icon: 'cisco' },
+      { name: 'OSI / TCP-IP', icon: 'cisco' },
+    ],
+  },
+]
+
+// Fallback badges shown before/if the live Credly fetch returns nothing.
+export const fallbackBadges = [
+  {
+    name: 'IT Essentials',
+    issuer: 'Cisco Networking Academy',
+    image: '',
+    url: 'https://www.netacad.com/',
+  },
+]
 
 export const projects = [
   {
@@ -48,6 +115,7 @@ export const projects = [
       'while recruiters post listings and review applicants. Google/Email auth, protected ' +
       'routes, light/dark toggle and a real-time stats dashboard.',
     tags: ['React 19', 'React Router v7', 'Framer Motion', 'Firebase', 'MongoDB'],
+    image: '/projects/careercode.png',
     link: 'https://career-code-7eae1.web.app/',
     repo: 'https://github.com/mehedipolash/carrer-code-client',
   },
@@ -58,6 +126,7 @@ export const projects = [
       'around shared interests. Firebase auth, protected routes, live search & category ' +
       'filtering, animated cards and pagination. React client with a Node/Express + MongoDB API.',
     tags: ['React', 'Firebase', 'Node.js', 'Express', 'MongoDB'],
+    image: '/projects/passionloop.png',
     link: 'https://passionloop-b71a5.web.app/',
     repo: 'https://github.com/mehedipolash/PASSIONLOOP-CLIENT',
   },
@@ -68,6 +137,7 @@ export const projects = [
       'Firebase Auth (Email/Password + Google), private routes, forgot-password and profile ' +
       'update, with an animated UI built on Framer Motion and Tailwind CSS + DaisyUI.',
     tags: ['React 19', 'Firebase', 'React Router', 'Framer Motion', 'DaisyUI'],
+    image: '/projects/careerfusion.png',
     link: 'https://careerfusion-44fab.web.app/',
     repo: 'https://github.com/mehedipolash/CAREERFUSION',
   },
@@ -88,6 +158,7 @@ export const projects = [
       'user management on a responsive Tailwind + DaisyUI UI. React 18 + Vite client with a ' +
       'Node/Express + MongoDB Atlas backend.',
     tags: ['React 18', 'Firebase', 'Express', 'MongoDB', 'DaisyUI'],
+    image: '/projects/coffee.png',
     link: 'https://coffee-store-app-77cb4.web.app/',
     repo: 'https://github.com/mehedipolash/coffee-management-client',
   },
@@ -97,6 +168,7 @@ export const projects = [
       'A React app for scheduling and managing doctor appointments — multiple pages, routing, ' +
       'localStorage persistence and chart-based visualizations of booking data.',
     tags: ['React', 'React Router', 'Charts', 'localStorage'],
+    image: '/projects/medical.png',
     link: 'https://medical-appointment-system-using-reac.netlify.app/',
     repo: 'https://github.com/mehedipolash/Medical-Appointment-System',
   },
