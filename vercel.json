@@ -1,7 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
   "crons": [
     {
       "path": "/api/sync-badges",
@@ -10,7 +8,7 @@
   ],
   "rewrites": [
     {
-      "source": "/admin",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ]
